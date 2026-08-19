@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --container-width: 1280px;
+  --page-padding: clamp(16px, 5vw, 80px);
+  --section-spacing: clamp(64px, 8vw, 120px);
+  --card-gap: clamp(20px, 3vw, 40px);
+
+  --text-primary: #ffffff;
+  --text-secondary: #d0d0d0;
+
+  --bg-primary: #040414;
+
+  --accent-primary: #ef00fc;
+  --accent-secondary: #7b2cff;
+
+  --card-bg: rgba(255, 255, 255, 0.04);
+  --card-border: rgba(255, 255, 255, 0.08);
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #040414;
+  color: white;
+
+  /* Background pattern scrolls WITH the page (default background-attachment: scroll).
+     Two layers: large faint grid lines (3 boxes per viewport width) + fine dot grid. */
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 2px, transparent 2px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 2px, transparent 2px),
+    radial-gradient(rgba(255, 255, 255, 0.09) 1px, transparent 1.4px);
+  background-size:
+    calc(100vw / 3) calc(100vw / 3),
+    calc(100vw / 3) calc(100vw / 3),
+    36px 36px;
+}
+
+
+/* ============================================================
+   Background system: keyframes, CSS vars, native-cursor hide,
+   and horizontal-overflow clip for the ambient-orb engine.
+   ============================================================ */
+
+:root {
+  --orb-i: 0.6;          /* global orb intensity 0–1 (dim them all at once)   */
+  --anim-play: running;  /* set to 'paused' to freeze drift/grid/marquee      */
+}
+
+/* orbs intentionally bleed past section edges; clip stops the h-scrollbar
+   WITHOUT breaking position:sticky (unlike overflow:hidden). */
+body { overflow-x: clip; }
+
+/* native cursor hidden only on precise pointers while the reticle is active */
+@media (pointer: fine) {
+  body[data-cursor-on],
+  body[data-cursor-on] * { cursor: none !important; }
+}
+
+/* gentle ambient-orb drift paths */
+@keyframes orbA { 0%,100% { transform: translate(0,0) scale(1); }   50% { transform: translate(60px,40px)  scale(1.12); } }
+@keyframes orbB { 0%,100% { transform: translate(0,0) scale(1); }   50% { transform: translate(-70px,-50px) scale(1.08); } }
+@keyframes orbC { 0%,100% { transform: translate(0,0) scale(1); }   50% { transform: translate(40px,-60px)  scale(1.15); } }
+@keyframes orbD { 0%,100% { transform: translate(0,0) scale(1); }   50% { transform: translate(-50px,55px)  scale(1.1); } }
+
+/* slow drift of the dot grid */
+@keyframes gridPan { from { background-position: 0 0; } to { background-position: 36px 36px; } }
+
+/* honor reduced-motion: neutralize the loops */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
