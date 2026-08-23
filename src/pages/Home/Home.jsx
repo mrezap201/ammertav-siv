@@ -9,10 +9,15 @@ import Tech from "./sections/Tech/Tech";
 import Ready from "../../components/common/Ready/Ready";
 import Testi from "./sections/Testi/Testi";
 import Faq from "../../components/common/Faq/Faq";
+import SEO from "../../components/SEO/SEO";
+import { seoConfig } from "../../constants/seoConfig";
+
 
 export default function Home() {
     return (
         <>
+            <SEO {...seoConfig.home} />
+            {/* Struktur Halaman */}
             <Hero />
             <Running />
             <About />
