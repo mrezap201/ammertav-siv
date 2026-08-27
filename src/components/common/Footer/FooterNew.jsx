@@ -36,7 +36,7 @@ function FooterNew() {
                         <div>
                             <h1 className='font-sans text-xs font-extrabold text-center text-white xl:text-lg 2xl:text-xl'>Address</h1>
                         </div>
-                        <div className='text-center'>
+                        <div className='text-center text-[10px] xl:text-lg 2xl:text-xl'>
                             <span>
                                 Jl. Kota Semarang, Indonesia
                             </span>

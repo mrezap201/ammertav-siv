@@ -117,7 +117,7 @@ function Testi() {
               <SwiperSlide key={index}>
                 <motion.div
                   {...cardMotion}
-                  className="h-64 p-4 text-center bg-gray-300 shadow-lg rounded-3xl"
+                  className="h-64 p-4 text-center border shadow-xl bg-gradient-to-br from-white/20 to-white/5 backdrop-blur-xl border-white/20 shadow-black/10 rounded-3xl"
                 >
                   <motion.img
                     {...imageMotion}
@@ -127,13 +127,13 @@ function Testi() {
                   />
                   <motion.p
                     {...textMotion}
-                    className="text-lg italic text-gray-700"
+                    className="text-sm italic text-white"
                   >
                     {item.description}
                   </motion.p>
                   <motion.h1
                     {...textMotion}
-                    className="mt-4 text-lg font-semibold text-cyan-500"
+                    className="mt-4 text-lg font-semibold text-accent-pink"
                   >
                     {item.name}
                   </motion.h1>
@@ -156,7 +156,7 @@ function Testi() {
               <SwiperSlide key={index}>
                 <motion.div
                   {...cardMotion}
-                  className="flex flex-col justify-between h-64 p-6 text-center bg-gray-300 shadow-lg rounded-3xl"
+                  className="flex flex-col justify-between h-64 p-6 text-center border shadow-xl bg-gradient-to-br from-white/20 to-white/5 backdrop-blur-xl border-white/20 shadow-black/10 rounded-3xl"
                 >
                   <motion.img
                     {...imageMotion}
@@ -166,7 +166,7 @@ function Testi() {
                   />
                   <motion.p
                     {...textMotion}
-                    className="text-xl italic text-gray-700"
+                    className="text-xl italic text-white"
                   >
                     {item.description}
                   </motion.p>
