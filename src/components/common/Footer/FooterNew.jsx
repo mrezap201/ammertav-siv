@@ -27,8 +27,8 @@ function FooterNew() {
                                 <h1 className='font-sans font-extrabold text-center text-white text-footer-heading xl:text-lg 2xl:text-xl'>Business</h1>
                             </div>
                             <div className='space-y-2 text-center'>
-                                <a href="mailto:info@kvi.or.id" className="transition-colors hover:text-white xl:text-lg 2xl:text-xl">pausnusantara@gmail.com</a> <br></br>
-                                <a href="tel:02178848462" className="transition-colors hover:text-white xl:text-lg 2xl:text-xl">0821567891011</a>
+                                <a href="mailto:info@kvi.or.id" className="transition-colors text-footer-body hover:text-white xl:text-lg 2xl:text-xl">pausnusantara@gmail.com</a> <br></br>
+                                <a href="tel:02178848462" className="transition-colors text-footer-body hover:text-white xl:text-lg 2xl:text-xl">0821567891011</a>
                             </div>
                         </div>
                     </div>
@@ -36,7 +36,7 @@ function FooterNew() {
                         <div>
                             <h1 className='font-sans font-extrabold text-center text-white text-footer-heading xl:text-lg 2xl:text-xl'>Address</h1>
                         </div>
-                        <div className='text-center xl:text-lg 2xl:text-xl'>
+                        <div className='text-center text-footer-body xl:text-lg 2xl:text-xl'>
                             <span>
                                 Jl. Kota Semarang, Indonesia
                             </span>
