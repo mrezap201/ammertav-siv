@@ -18,7 +18,7 @@ function FooterNew() {
                                         <img src={logo} alt="Logo" className="h-auto object-contain w-[110px] md:w-[124px] lg:w-[136px]" />
                         
                                       </div>
-                                      <p className="text-footer-body text-slate-300 leading-relaxed max-w-[180px]">
+                                      <p className="leading-relaxed text-footer-body text-slate-300 xl:text-lg 2xl:text-xl">
                                         Technology simplifies <br/>every aspect of life.
                                       </p>
                                     </div>
