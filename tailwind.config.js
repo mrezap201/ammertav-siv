@@ -9,6 +9,11 @@ export default {
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
       },
+      fontSize: {
+        // format: [fontSize, { lineHeight, letterSpacing, fontWeight (opsional) }]
+         'footer-heading': ['0.75rem', { lineHeight: '1.2', fontWeight: '800' }], // = 12px, sama seperti text-xs
+        'footer-body': ['1 rem', { lineHeight: '1.4' }], // = 10px, sama seperti text-[10px]
+      },
       colors: {
         ink: '#040414',
         fg: '#ffffff',
