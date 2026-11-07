@@ -8,7 +8,6 @@ const navItems = [
     { to: "/about-us", label: "About" },
     { to: "/service", label: "Service" },
     { to: "/product", label: "Product" },
-    { to: "/contact", label: "Contact" },
 ];
 
 const linkBase =
@@ -151,13 +150,12 @@ export default function NavbarNew() {
                     {/* RIGHT GROUP */}
                     <div className="flex items-center gap-2">
                         {/* CONTACT US — desktop only */}
-                        <NavLink
+                        <Link
                             to="/contact"
-                            onClick={handleNavClick("/contact")}
                             className="hidden md:inline-flex items-center justify-center rounded-3xl cursor-pointer transition-all duration-300 bg-gradient-to-r from-brand-purple to-brand-violet text-lg md:text-xl font-semibold text-white md:px-6 md:py-3 hover:opacity-90 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(157,78,221,0.3)]"
                         >
                             Contact Us
-                        </NavLink>
+                        </Link>
 
                         {/* HAMBURGER — mobile only */}
                         <button
