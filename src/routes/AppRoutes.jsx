@@ -11,6 +11,8 @@ import Home from "../pages/Home/Home";
 const Product = lazy(() => import("../pages/Product/Product"));
 const Service = lazy(() => import("../pages/Service/Service"));
 const AboutUs = lazy(() => import("../pages/About/About"));
+const ContactUs = lazy(() => import("../pages/Contact/ContactUs"));
+
 
 // Reset scroll on every route change — React Router preserves scroll by default.
 function ScrollToTop() {
@@ -31,6 +33,7 @@ function AppRoutes() {
           <Route path="/product" element={<Product />} />
           <Route path="/service" element={<Service />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/contact" element={<ContactUs/>} />
         </Route>
       </Routes>
     </BrowserRouter>

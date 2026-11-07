@@ -8,6 +8,7 @@ const navItems = [
     { to: "/about-us", label: "About" },
     { to: "/service", label: "Service" },
     { to: "/product", label: "Product" },
+    { to: "/contact", label: "Contact" },
 ];
 
 const linkBase =

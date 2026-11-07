@@ -43,4 +43,14 @@ export const seoConfig = {
     image: DEFAULT_IMAGE,
     lang: "en",
   },
+
+  product: {
+    title: "Our Product | AMMERTAV",
+    description:
+      "Explore the latest projects from Sivinaries: custom web development, mobile apps, and backend systems built for your business needs.",
+    keywords: "contact AMMERTAV, software house contact, request a quote",
+    url: `${BASE_URL}/product`,
+    image: DEFAULT_IMAGE,
+    lang: "en",
+  },
 };
